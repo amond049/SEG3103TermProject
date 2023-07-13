@@ -20,6 +20,11 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.krraghavan</groupId>
+            <artifactId>xeger</artifactId>
+            <version>1.0.0-RELEASE</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
