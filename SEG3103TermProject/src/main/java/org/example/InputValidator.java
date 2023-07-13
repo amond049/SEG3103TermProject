@@ -13,7 +13,7 @@ public class InputValidator {
     // City: between 1 and 50 characters and needs to be only alphabetical characters
     // Postal Code: They do some implicit check in the background to correlate the street address with postal code
 
-    String fullNameRegex = "^[a-zA-Z\\s-.']{20,50}$";
+    String fullNameRegex = "^[a-zA-Z\\s-.']{1,50}$";
     String phoneNumberRegex = "^([0-9]{3}[-. ]?){2}[0-9]{4}$";
     String addressRegex = "^[A-Za-z]{10,60}$";
     String cityRegex = "^[A-Za-z'-.]{10,50}$";

@@ -1,4 +1,4 @@
-<fullName> ::= <letterOrSpecialChar>{20,50}
+<fullName> ::= <letterOrSpecialChar>{1,50}
 <phoneNumber> ::= <digitOrSeparator>{10}
 <address> ::= <letter>{10,60}
 <city> ::= <letterOrSpecialChar>{10,50}
