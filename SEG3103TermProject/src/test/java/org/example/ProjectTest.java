@@ -1,6 +1,4 @@
 package org.example;
-import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -48,7 +46,18 @@ public class ProjectTest {
         boolean isValid = inputValidator.validateVisaCard(cardNumber);
         assertTrue(isValid);
     }
-
+    @Test
+    public void masterCardValidTest(){
+        String cardNumber = "5383928475636475";
+        boolean isValid = inputValidator.validateMasterCard(cardNumber);
+        assertTrue(isValid);
+    }
+    @Test
+    public void AmexValidTest(){
+        String cardNumber = "348472485967583";
+        boolean isValid = inputValidator.validateAmexCard(cardNumber);
+        assertTrue(isValid);
+    }
     @Test
     public void fullNameInvalidTest(){
         String fullName = "123";
@@ -87,6 +96,18 @@ public class ProjectTest {
     public void visaCardInvalidTest(){
         String cardNumber = "a614411336338";
         boolean isValid = inputValidator.validateVisaCard(cardNumber);
+        assertFalse(isValid);
+    }
+    @Test
+    public void masterCardInvalidTest(){
+        String cardNumber = "6383928475636475";
+        boolean isValid = inputValidator.validateMasterCard(cardNumber);
+        assertFalse(isValid);
+    }
+    @Test
+    public void AmexInvalidTest(){
+        String cardNumber = "399573849589987";
+        boolean isValid = inputValidator.validateAmexCard(cardNumber);
         assertFalse(isValid);
     }
 }

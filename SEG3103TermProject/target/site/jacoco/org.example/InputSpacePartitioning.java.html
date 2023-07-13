@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InputSpacePartitioning.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SEG3103TermProject</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">InputSpacePartitioning.java</span></div><h1>InputSpacePartitioning.java</h1><pre class="source lang-java linenums">package org.example;
+
+import nl.flotsam.xeger.Xeger;
+
+import java.io.*;
+import java.net.URL;
+import java.util.Scanner;
+
+<span class="nc" id="L9">public class InputSpacePartitioning {</span>
+    public static void main(String[] args){
+<span class="nc" id="L11">        String fullNameRegex = &quot;[a-zA-Z\\s-.']{20,50}&quot;;</span>
+<span class="nc" id="L12">        String phoneNumberRegex = &quot;([0-9]{3}[- ]?){2}[0-9]{4}&quot;;</span>
+<span class="nc" id="L13">        String addressRegex = &quot;[A-Za-z]{10,60}&quot;;</span>
+<span class="nc" id="L14">        String cityRegex = &quot;[A-Za-z'-.]{10,50}&quot;;</span>
+<span class="nc" id="L15">        String postalCodeRegex = &quot;[A-Za-z]{1}[0-9]{1}[A-Za-z]{1} [0-9]{1}[A-Za-z]{1}[0-9]{1}&quot;;</span>
+<span class="nc" id="L16">        String visaCardNumberRegex = &quot;[4][0-9]{12}&quot;;</span>
+
+<span class="nc" id="L18">        Xeger fullNameGenerator = new Xeger(fullNameRegex);</span>
+<span class="nc" id="L19">        Xeger phoneNumberGenerator = new Xeger(phoneNumberRegex);</span>
+<span class="nc" id="L20">        Xeger addressGenerator = new Xeger(addressRegex);</span>
+<span class="nc" id="L21">        Xeger cityGenerator = new Xeger(cityRegex);</span>
+<span class="nc" id="L22">        Xeger postalCodeGenerator = new Xeger(postalCodeRegex);</span>
+<span class="nc" id="L23">        Xeger visaCardNumberGenerator = new Xeger(visaCardNumberRegex);</span>
+
+        String randomFullName;
+        String randomPhoneNumber;
+        String randomAddress;
+        String randomCity;
+        String randomPostalCode;
+        String randomCardNumber;
+
+        try {
+<span class="nc" id="L33">            File fullNameFile = new File(&quot;C:\\Users\\meeky\\Desktop\\Universities\\Second Year\\Summer Semester\\SEG 3103\\Final_Project\\SEG3103TermProject\\SEG3103TermProject\\src\\main\\java\\org\\example\\ValidFullName.txt&quot;);</span>
+<span class="nc" id="L34">            File phoneNumberFile = new File(&quot;C:\\Users\\meeky\\Desktop\\Universities\\Second Year\\Summer Semester\\SEG 3103\\Final_Project\\SEG3103TermProject\\SEG3103TermProject\\src\\main\\java\\org\\example\\ValidPhoneNumber.txt&quot;);</span>
+<span class="nc" id="L35">            File addressFile = new File(&quot;C:\\Users\\meeky\\Desktop\\Universities\\Second Year\\Summer Semester\\SEG 3103\\Final_Project\\SEG3103TermProject\\SEG3103TermProject\\src\\main\\java\\org\\example\\ValidAddress.txt&quot;);</span>
+<span class="nc" id="L36">            File cityFile = new File(&quot;C:\\Users\\meeky\\Desktop\\Universities\\Second Year\\Summer Semester\\SEG 3103\\Final_Project\\SEG3103TermProject\\SEG3103TermProject\\src\\main\\java\\org\\example\\ValidCity.txt&quot;);</span>
+<span class="nc" id="L37">            File postalCodeFile = new File(&quot;C:\\Users\\meeky\\Desktop\\Universities\\Second Year\\Summer Semester\\SEG 3103\\Final_Project\\SEG3103TermProject\\SEG3103TermProject\\src\\main\\java\\org\\example\\ValidPostalCode.txt&quot;);</span>
+<span class="nc" id="L38">            File cardFile = new File(&quot;C:\\Users\\meeky\\Desktop\\Universities\\Second Year\\Summer Semester\\SEG 3103\\Final_Project\\SEG3103TermProject\\SEG3103TermProject\\src\\main\\java\\org\\example\\ValidCardNumber.txt&quot;);</span>
+
+<span class="nc" id="L40">            BufferedWriter fullNameWriter = new BufferedWriter(new FileWriter(fullNameFile));</span>
+<span class="nc" id="L41">            BufferedWriter phoneNumberWriter = new BufferedWriter(new FileWriter(phoneNumberFile));</span>
+<span class="nc" id="L42">            BufferedWriter addressWriter = new BufferedWriter(new FileWriter(addressFile));</span>
+<span class="nc" id="L43">            BufferedWriter cityWriter = new BufferedWriter(new FileWriter(cityFile));</span>
+<span class="nc" id="L44">            BufferedWriter postalCodeWriter = new BufferedWriter(new FileWriter(postalCodeFile));</span>
+<span class="nc" id="L45">            BufferedWriter cardWriter = new BufferedWriter(new FileWriter(cardFile));</span>
+
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            for (int i = 0; i &lt; 100; i++){</span>
+<span class="nc" id="L48">                randomFullName = fullNameGenerator.generate();</span>
+<span class="nc" id="L49">                randomPhoneNumber = phoneNumberGenerator.generate();</span>
+<span class="nc" id="L50">                randomAddress = addressGenerator.generate();</span>
+<span class="nc" id="L51">                randomCity = cityGenerator.generate();</span>
+<span class="nc" id="L52">                randomPostalCode = postalCodeGenerator.generate();</span>
+<span class="nc" id="L53">                randomCardNumber = visaCardNumberGenerator.generate();</span>
+
+<span class="nc" id="L55">                fullNameWriter.write(randomFullName + &quot;\n&quot;);</span>
+<span class="nc" id="L56">                phoneNumberWriter.write(randomPhoneNumber + &quot;\n&quot;);</span>
+<span class="nc" id="L57">                addressWriter.write(randomAddress + &quot;\n&quot;);</span>
+<span class="nc" id="L58">                cityWriter.write(randomCity + &quot;\n&quot;);</span>
+<span class="nc" id="L59">                postalCodeWriter.write(randomPostalCode + &quot;\n&quot;);</span>
+<span class="nc" id="L60">                cardWriter.write(randomCardNumber + &quot;\n&quot;);</span>
+            }
+
+<span class="nc" id="L63">            fullNameWriter.close();</span>
+<span class="nc" id="L64">            phoneNumberWriter.close();</span>
+<span class="nc" id="L65">            addressWriter.close();</span>
+<span class="nc" id="L66">            cityWriter.close();</span>
+<span class="nc" id="L67">            postalCodeWriter.close();</span>
+<span class="nc" id="L68">            cardWriter.close();</span>
+
+<span class="nc" id="L70">        } catch (Exception e){</span>
+<span class="nc" id="L71">            System.out.println(&quot;Something went wrong fuckass&quot;);</span>
+<span class="nc" id="L72">            e.printStackTrace();</span>
+<span class="nc" id="L73">        }</span>
+<span class="nc" id="L74">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

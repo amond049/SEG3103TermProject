@@ -35,8 +35,6 @@ public class InputValidator {
     Pattern masterCardPattern = Pattern.compile(masterCardNumberRegex);
     Pattern amexCardPattern = Pattern.compile(amexCardNumberRegex);
 
-    public static void main(String[] args) {}
-
     // Validates fullName
     public boolean validateFullName(String fullName){
         Matcher matcher = fullNamePattern.matcher(fullName);

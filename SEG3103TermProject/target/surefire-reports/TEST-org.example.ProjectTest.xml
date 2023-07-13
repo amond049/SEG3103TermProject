@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.example.ProjectTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="16" failures="0" name="org.example.ProjectTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2023.1.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -60,5 +60,20 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="org.example.ProjectTest" name="fullNameValidTest" time="0.005"/>
+  <testcase classname="org.example.ProjectTest" name="cityValidTest" time="0.005"/>
+  <testcase classname="org.example.ProjectTest" name="visaCardInvalidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="phoneNumberValidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="fullNameInvalidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="masterCardValidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="AmexInvalidTest" time="0.001"/>
+  <testcase classname="org.example.ProjectTest" name="addressValidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="visaCardValidTest" time="0.001"/>
+  <testcase classname="org.example.ProjectTest" name="postalCodeInvalidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="addressInvalidTest" time="0.001"/>
+  <testcase classname="org.example.ProjectTest" name="fullNameValidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="cityInvalidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="AmexValidTest" time="0.001"/>
+  <testcase classname="org.example.ProjectTest" name="masterCardInvalidTest" time="0"/>
+  <testcase classname="org.example.ProjectTest" name="phoneNumberInvalidTest" time="0.001"/>
+  <testcase classname="org.example.ProjectTest" name="postalCodeValidTest" time="0.001"/>
 </testsuite>
