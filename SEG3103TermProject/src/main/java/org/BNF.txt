@@ -1,0 +1,14 @@
+<fullName> ::= <letterOrSpecialChar>{20,50}
+<phoneNumber> ::= <digitOrSeparator>{10}
+<address> ::= <letter>{10,60}
+<city> ::= <letterOrSpecialChar>{10,50}
+<postalCode> ::= <letter><digit><letter><whitespace><digit><letter><digit>
+<cardNumber> ::= <visaCardNumber> | <masterCardNumber> | <amexCardNumber>
+<visaCardNumber> ::= "4"<digit>{12}
+<masterCardNumber> ::= "5"[1-5]<digit>{14}
+<amexCardNumber> ::= "3"[47]<digit>{13}
+<digit> ::= [0-9]
+<letter> ::= [A-Za-z]
+<letterOrSpecialChar> ::= [A-Za-z\s-.']
+<whitespace> ::= [\t\n\r ]
+<digitOrSeparator> ::= <digit> | "-" | "." | " "
