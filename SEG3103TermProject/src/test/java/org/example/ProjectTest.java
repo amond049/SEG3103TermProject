@@ -222,6 +222,20 @@ public class ProjectTest {
         boolean isValid = inputValidator.validateFullName(fullName);
         assertFalse(isValid);
     }
+
+    @Test
+    public void fullNameInvalidTestJustSpace(){
+        String fullName = "";
+        boolean isValid = inputValidator.validateFullName(fullName);
+        assertFalse(isValid);
+    }
+
+    @Test
+    public void fullNameInvalidTestSpecialCharacters(){
+        String fullName = "@&#^*@#^@*";
+        boolean isValid = inputValidator.validateFullName(fullName);
+        assertFalse(isValid);
+    }
     @Test
     public void phoneNumberInvalidTest(){
         String phoneNumber = "adh 173-5849";
