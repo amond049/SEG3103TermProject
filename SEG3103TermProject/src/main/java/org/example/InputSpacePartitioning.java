@@ -68,7 +68,7 @@ public class InputSpacePartitioning {
             cardWriter.close();
 
         } catch (Exception e){
-            System.out.println("Something went wrong fuckass");
+            System.out.println("Something went wrong!");
             e.printStackTrace();
         }
     }
